@@ -1,0 +1,215 @@
+/* =============================================
+   ABOUT — intro met foto, hobbies, motivatie, skills, tijdlijn, CV
+   ============================================= */
+
+/* ---- Intro met foto ---- */
+.about-intro {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.about-photo img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border: 2px solid var(--black);
+}
+
+.about-photo-placeholder {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: var(--gray);
+  border: 2px solid var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.about-text p {
+  color: var(--muted);
+  margin-bottom: 1rem;
+  line-height: 1.75;
+}
+
+/* ---- Contact info ---- */
+.contact-list {
+  list-style: none;
+  margin-top: 1.5rem;
+}
+
+.contact-list li {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--text);
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.contact-list li:last-child { border-bottom: none; }
+
+.contact-icon {
+  width: 8px;
+  height: 8px;
+  background: var(--green);
+  flex-shrink: 0;
+}
+
+/* ---- Hobbies ---- */
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.hobby-item {
+  padding: 1.75rem;
+  border: 1.5px solid #e0e0e0;
+  transition: border-color 0.2s;
+}
+
+.hobby-item:hover { border-color: var(--green); }
+
+.hobby-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.hobby-item h3 {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+  color: var(--black);
+}
+
+.hobby-item p {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ---- Motivatie ---- */
+.motivation-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.motivation-block {
+  padding: 2rem;
+  background: var(--black);
+  color: var(--white);
+}
+
+.motivation-block h3 {
+  color: var(--orange);
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.motivation-block p {
+  font-size: 0.92rem;
+  color: #bbb;
+  line-height: 1.75;
+}
+
+/* ---- Skills ---- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+.skills-col h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.soft-list { list-style: none; }
+
+.soft-list li {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 0.92rem;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.soft-list li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--orange);
+  flex-shrink: 0;
+}
+
+/* ---- Tijdlijn (ervaring) ---- */
+.timeline { margin-top: 2rem; }
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.timeline-year {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: var(--green);
+  padding-top: 3px;
+}
+
+.timeline-item h4 {
+  font-size: 0.97rem;
+  margin-bottom: 0.3rem;
+}
+
+.timeline-item p {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ---- CV ---- */
+.cv-viewer {
+  width: 100%;
+  height: 750px;
+  border: 1.5px solid #e0e0e0;
+  margin-top: 2rem;
+  display: block;
+}
+
+.cv-btns {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .about-intro     { grid-template-columns: 1fr; }
+  .about-photo     { max-width: 220px; }
+  .hobbies-grid    { grid-template-columns: 1fr; }
+  .motivation-grid { grid-template-columns: 1fr; }
+  .skills-grid     { grid-template-columns: 1fr; }
+}

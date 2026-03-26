@@ -1,0 +1,159 @@
+/* =============================================
+   PROJECTS — project-items, bijdragen, persoonlijke kaarten
+   ============================================= */
+
+/* ---- Project-item (SKIL2) ---- */
+.project-item {
+  padding: 3rem 0;
+  border-bottom: 1.5px solid #e0e0e0;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.project-item:last-child { border-bottom: none; }
+
+.project-side { padding-top: 4px; }
+
+.project-number {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 3rem;
+  color: #e0e0e0;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.project-status {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border: 1.5px solid;
+}
+
+.status-done     { color: var(--green);  border-color: var(--green); }
+.status-progress { color: var(--orange); border-color: var(--orange); }
+
+.project-main h2 {
+  font-size: 1.5rem;
+  color: var(--black);
+  margin-bottom: 0.25rem;
+}
+
+.project-course {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 1.25rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.project-main p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+  max-width: 620px;
+}
+
+/* ---- Contributie ---- */
+.contrib-section { margin-top: 1.25rem; }
+
+.contrib-label {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+}
+
+.contrib-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.contrib-list li {
+  font-size: 0.88rem;
+  color: var(--muted);
+  padding: 0.45rem 0;
+  border-bottom: 1px solid #eeeeee;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.contrib-list li::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  background: var(--green);
+  flex-shrink: 0;
+}
+
+.contrib-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1.25rem;
+}
+
+/* ---- Persoonlijke projecten ---- */
+.personal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.personal-card {
+  border: 1.5px solid #e0e0e0;
+  transition: border-color 0.2s;
+}
+
+.personal-card:hover { border-color: var(--green); }
+
+.personal-card-top {
+  background: var(--black);
+  padding: 2rem;
+  min-height: 120px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.personal-card-top h3 {
+  color: var(--white);
+  font-size: 1rem;
+}
+
+.personal-card-body { padding: 1.5rem; }
+
+.personal-card-body p {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.65;
+  margin-bottom: 1rem;
+}
+
+.note-text {
+  font-size: 0.82rem;
+  color: var(--green);
+  font-style: italic;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .project-item  { grid-template-columns: 1fr; gap: 1rem; }
+  .contrib-cols  { grid-template-columns: 1fr; }
+  .personal-grid { grid-template-columns: 1fr; }
+}
