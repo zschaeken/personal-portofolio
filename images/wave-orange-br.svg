@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 300" preserveAspectRatio="none">
+  <!-- Depth glow — exits off bottom and right -->
+  <path d="M -30,330 C 55,268 158,228 248,192 C 338,155 422,138 475,108 L 475,330 Z"
+        fill="#e6ab00" opacity="0.45"/>
+  <!-- Main orange shape — exits off bottom and right -->
+  <path d="M -30,318 C 60,256 160,216 250,180 C 340,144 420,126 475,98 L 475,318 Z"
+        fill="#ffbe00"/>
+</svg>

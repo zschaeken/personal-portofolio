@@ -1,0 +1,101 @@
+/* =============================================
+   LAYOUT — secties, golven, page header, footer
+   ============================================= */
+
+/* ---- Secties ---- */
+.section {
+  padding: 5rem 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-full { padding: 5rem 3rem; }
+
+.section-gray  { background: var(--gray); }
+
+.section-black {
+  background: var(--black);
+  color: var(--white);
+}
+
+.section-black h1,
+.section-black h2,
+.section-black h3 { color: var(--white); }
+
+/* ---- Golvende hoek-decoraties ---- */
+.has-wave { position: relative; overflow: hidden; }
+
+.wave-green-tl {
+  position: absolute;
+  top: 0; left: 0;
+  width: 480px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.wave-orange-br {
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 440px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.wave-green-br {
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 480px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.wave-orange-bl {
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 440px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Alles binnen een wave-sectie boven de golf */
+.has-wave > *:not(.wave-green-tl):not(.wave-orange-br):not(.wave-green-br):not(.wave-orange-bl) {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---- Gedeelde paginaheader (about & projects) ---- */
+.page-header {
+  background: var(--black);
+  color: var(--white);
+  padding: 5rem 3rem 4rem;
+}
+
+.page-header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.page-header h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--white);
+  margin-top: 0.5rem;
+}
+
+.page-header h1 span { color: var(--green); }
+
+/* ---- Footer ---- */
+footer {
+  background: var(--black);
+  color: #aaa;
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.85rem;
+}
+
+footer strong { color: var(--white); }
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .section      { padding: 3rem 1.5rem; }
+  .section-full { padding: 3rem 1.5rem; }
+}

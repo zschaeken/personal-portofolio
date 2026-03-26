@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" preserveAspectRatio="none">
+  <!-- Depth glow — exits off top and left -->
+  <path d="M 510,-30 C 410,15 295,65 215,122 C 130,182 60,252 -30,342 L -30,-30 Z"
+        fill="#035e3e" opacity="0.45"/>
+  <!-- Main green shape — exits off top and left -->
+  <path d="M 485,-30 C 388,8 278,58 198,115 C 115,175 48,248 -30,325 L -30,-30 Z"
+        fill="#04724d"/>
+</svg>

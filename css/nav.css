@@ -1,0 +1,113 @@
+/* =============================================
+   NAVIGATIE
+   ============================================= */
+
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: var(--white);
+  border-bottom: 2px solid var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3rem;
+  height: 60px;
+}
+
+.nav-logo {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--black);
+  letter-spacing: 0.04em;
+}
+
+.nav-logo span { color: var(--green); }
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--black);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--green);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-lang {
+  display: flex;
+  gap: 0.25rem;
+  font-size: 0.78rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
+.nav-lang a {
+  padding: 3px 8px;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+
+.nav-lang a:hover,
+.nav-lang a.active {
+  color: var(--green);
+}
+
+.nav-lang span { color: #ccc; }
+
+/* Hamburger mobiel */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.nav-toggle span {
+  width: 22px;
+  height: 2px;
+  background: var(--black);
+}
+
+.page-content { padding-top: 60px; }
+
+/* ---- Responsive nav ---- */
+@media (max-width: 768px) {
+  nav { padding: 0 1.25rem; }
+
+  .nav-toggle { display: flex; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px; left: 0; right: 0;
+    background: var(--white);
+    flex-direction: column;
+    padding: 1.5rem 2rem;
+    gap: 1.25rem;
+    border-bottom: 2px solid var(--black);
+  }
+
+  .nav-links.open { display: flex; }
+}
