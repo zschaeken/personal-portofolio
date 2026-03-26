@@ -137,6 +137,12 @@
   text-align: center;
 }
 
+/* ---- Responsive ---- */
+@media (max-width: 480px) {
+  .project-img-grid { grid-template-columns: 1fr; }
+  .hero-btns .btn, .cv-btns .btn { font-size: 0.78rem; }
+}
+
 /* ---- Persoonlijke kaart — poster ---- */
 .personal-card-poster {
   position: relative;

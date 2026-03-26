@@ -116,4 +116,21 @@ footer strong { color: var(--white); }
 @media (max-width: 768px) {
   .section      { padding: 3rem 1.5rem; }
   .section-full { padding: 3rem 1.5rem; }
+  .page-header  { padding: 3.5rem 1.5rem 2.5rem; }
+
+  .wave-green-tl        { width: 280px; }
+  .wave-orange-br       { width: 260px; }
+  .wave-lines-green-right { width: 220px; }
+  .wave-lines-orange-left { width: 200px; }
+}
+
+@media (max-width: 480px) {
+  .section      { padding: 2.5rem 1.25rem; }
+  .section-full { padding: 2.5rem 1.25rem; }
+  .page-header  { padding: 2.5rem 1.25rem 2rem; }
+
+  .wave-green-tl        { width: 180px; }
+  .wave-orange-br       { width: 160px; }
+  .wave-lines-green-right { width: 140px; }
+  .wave-lines-orange-left { width: 130px; }
 }

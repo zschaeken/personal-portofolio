@@ -209,7 +209,21 @@
 @media (max-width: 900px) {
   .about-intro     { grid-template-columns: 1fr; }
   .about-photo     { max-width: 220px; }
-  .hobbies-grid    { grid-template-columns: 1fr; }
+  .hobbies-grid    { grid-template-columns: repeat(2, 1fr); }
   .motivation-grid { grid-template-columns: 1fr; }
-  .skills-grid     { grid-template-columns: 1fr; }
+  .skills-grid     { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+
+@media (max-width: 600px) {
+  .hobbies-grid { grid-template-columns: 1fr; }
+  .cv-viewer    { height: 500px; }
+  .cv-btns      { flex-direction: column; }
+  .cv-btns .btn { width: 100%; text-align: center; }
+}
+
+@media (max-width: 480px) {
+  .about-photo   { max-width: 160px; }
+  .cv-viewer     { height: 380px; }
+  .timeline-item { grid-template-columns: 70px 1fr; gap: 0.75rem; }
+  .motivation-block { padding: 1.5rem; }
 }

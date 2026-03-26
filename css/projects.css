@@ -155,5 +155,15 @@
 @media (max-width: 900px) {
   .project-item  { grid-template-columns: 1fr; gap: 1rem; }
   .contrib-cols  { grid-template-columns: 1fr; }
+  .personal-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
   .personal-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .project-item    { padding: 2rem 0; }
+  .project-number  { font-size: 2rem; }
+  .project-main h2 { font-size: 1.2rem; }
 }

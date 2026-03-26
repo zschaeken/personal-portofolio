@@ -90,23 +90,26 @@ nav {
   background: var(--black);
 }
 
-.page-content { padding-top: 60px; }
+.page-content { padding-top: 80px; }
 
 /* ---- Responsive nav ---- */
 @media (max-width: 768px) {
-  nav { padding: 0 1.25rem; }
+  nav { padding: 0 1.25rem; height: 64px; }
+
+  .page-content { padding-top: 64px; }
 
   .nav-toggle { display: flex; }
 
   .nav-links {
     display: none;
     position: absolute;
-    top: 60px; left: 0; right: 0;
+    top: 64px; left: 0; right: 0;
     background: var(--white);
     flex-direction: column;
     padding: 1.5rem 2rem;
     gap: 1.25rem;
     border-bottom: 2px solid var(--black);
+    z-index: 99;
   }
 
   .nav-links.open { display: flex; }
